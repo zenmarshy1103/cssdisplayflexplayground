@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+
+}
+
+html, body {
+    width: 100%;
+}
+
+.item-char-1 {
+    border: 1px solid blue;
+
+}
+
+
+
+/* setting the flex container size */
+.flex-container-1 {
+    
+    height: 500px;
+    display:flex;
+    gap: 5px;
+
+    /* Set the direction (ROW or COLUMN) of the flex container */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+
+    /* Move the child (HORIZONALLY) within the flex-container */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+
+
+
+    /* Move the child (VERTICALLY) within the flex-container
+    /* align-items: flex-end; */
+    /* align-items: stretch; */
+    /* align-items: center */
+    /* align-items: flex-start; */
+    /* align-items: baseline; */
+
+    
+
+
+    
+}
+
+.flex-item-1 {
+    width: 50px; 
+    /* height: 50px;  */
+
+   
+}
+
+/* Re-ordering each of the items to show on the browser,  */
+/* (IMPORTANT: each item needs to be assigned with the order attribute or the one without the order number will always be at position 1) */
+
+.flex-item-1:nth-child(1) {
+    order: 2;
+
+    /*Aligning item in relationship to the flex-area (Vertically)*/
+    align-self: flex-start;
+
+
+    /*Grow the item (increase the size) by factor */
+    flex-grow: 1;
+
+   
+}
+
+.flex-item-1:nth-child(2) {
+    order: 1;
+    align-self: flex-end;
+    flex-grow: 1;
+    
+
+}
+
+.flex-item-1:nth-child(3) {
+    order: 6;
+    align-self: center;
+    /*Shrink the item (decraese the size) by factor */
+    /* flex-shrink: 2; */
+    flex-grow: 1;
+    
+}
+
+.flex-item-1:nth-child(4) {
+    order: 3;
+    align-self: baseline;
+    flex-grow: 1;
+}
+
+.flex-item-1:nth-child(5) {
+    order: 4;
+    align-self:stretch;
+    flex-grow: 1;
+    
+}
+
+.flex-item-1:nth-child(6) {
+    order: 5;
+    
+    flex-grow: 1;
+    
+}
+
+
+
+#main-container {
+    display: flex;
+    gap: 10px;
+    width: 450px;
+    height: 100px;
+    border: 2px solid #c3c3c3;
+}
+
+#main-container div {
+    
+    /* /flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex-basis: 100px; */
+    flex: 1 1 100px;
+}
+
+#main-container div:nth-of-type(2) {
+    flex-shrink: 3;
+  }
+
+#main-container div:nth-of-type(4) {
+    flex-shrink: 3;
+  }
+
